@@ -8,5 +8,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     tiempo_pasado = input.runningTime() - start
     score = Math.abs(tiempo_pasado - 7000)
-    basic.showNumber(score)
+    for (let index = 0; index < 4; index++) {
+        basic.showNumber(score / 1000)
+    }
 })
